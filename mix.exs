@@ -2,12 +2,16 @@ defmodule TimeAgoWords.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :time_ago_words,
-     version: "0.0.1",
-     elixir: "~> 1.2",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps]
+    [
+      app: :time_ago_words,
+      version: "0.0.1",
+      elixir: "~> 1.2",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps,
+      description: description,
+      package: package
+    ]
   end
 
   # Configuration for the OTP application
@@ -30,6 +34,21 @@ defmodule TimeAgoWords.Mixfile do
     [
       {:timex, "~> 2.1"},
       {:shouldi, "~> 0.3.0", only: :test}
+    ]
+  end
+
+  defp description do
+    """
+    A simple function to return the approximate difference between two times using words.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md", "LICENSE.md"],
+      maintainers: ["Chris Blackburn"],
+      licenses: ["MIT"],
+      links: %{"GitHub": "https://github.com/midwire/time_ago_words"}
     ]
   end
 end
