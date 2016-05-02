@@ -32,8 +32,7 @@ defmodule TimeAgoWords.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:timex, "~> 2.1"},
-      {:shouldi, "~> 0.3.0", only: :test}
+      {:timex, "~> 2.1"}
     ]
   end
 

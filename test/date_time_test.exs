@@ -1,6 +1,5 @@
-require IEx
 defmodule DateTimeTest do
-  use ShouldI, async: true
+  use ExUnit.Case, async: true
   use Timex
   doctest TimeAgoWords
 
