@@ -13,7 +13,7 @@ The package can be installed as follows:
   1. Add time_ago_words to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:time_ago_words, "~> 0.0.1"}]
+          [{:time_ago_words, "~> 0.0.2"}]
         end
 
   2. Ensure time_ago_words is started before your application:
@@ -26,4 +26,4 @@ The package can be installed as follows:
 
     post = Repo.get!(Post, id)
     TimeAgoWords.diff(post.inserted_at)
-    # => "about 3 days ago"
+    # => "about 3 days"

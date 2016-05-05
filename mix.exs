@@ -4,7 +4,7 @@ defmodule TimeAgoWords.Mixfile do
   def project do
     [
       app: :time_ago_words,
-      version: "0.0.1",
+      version: "0.0.2",
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
